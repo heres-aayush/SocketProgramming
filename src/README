@@ -1,0 +1,29 @@
+1. Server - Client Applications
+2. Networking protocols
+3. Socket Programming
+4. Web Services
+
+Packages - java.net( J2SE API - Java 2, Standard Edition )
+            Support for - TCP (Transmission Control Protocol)
+                           UDP ( User Datagram Protocol - connection - less)
+            Socket Class - socket
+            ServerSocket - Server program to listen for clients and establish connection
+
+
+Socket Programming - TCP
+    The client creates a socket and tries to connect to the server .
+    Server creates a Socket OBJECT and connects/interacts with the client
+
+    Steps -
+    * Server instantiates ServerSocket (with port number)
+    * Server accepts() method of ServerSocket Class .
+
+    # Client instantiates a Server Object specifying server name and port number
+    # Constructor of Socket class tries to connect ServerSocket at its accept()  method which is constantly running .
+
+    $$ Both client and Server has InputStream and OutputStream
+    client(InputStream) ----> server(OutputStream)
+    Server(OutputStream) ----> Client(InputStream)
+
+    The ServerSocket has 4 constructors -
+    !(src/public/img.png)
