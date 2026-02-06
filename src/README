@@ -27,3 +27,6 @@ Socket Programming - TCP
 
     The ServerSocket has 4 constructors -
         ![](src/public/img.png)
+    The ServerSocket has following mehods -
+        ![](public/img_1.png)
+
