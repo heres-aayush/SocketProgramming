@@ -21,10 +21,9 @@ Socket Programming - TCP
     # Client instantiates a Server Object specifying server name and port number
     # Constructor of Socket class tries to connect ServerSocket at its accept()  method which is constantly running .
 
-    $$ Both client and Server has InputStream and OutputStream
+    Both client and Server has InputStream and OutputStream
     client(InputStream) ----> server(OutputStream)
     Server(OutputStream) ----> Client(InputStream)
 
     The ServerSocket has 4 constructors -
-![](src/public/img.png)
-    
+        ![](SocketProgramming\src\public\img.png)
