@@ -26,4 +26,4 @@ Socket Programming - TCP
     Server(OutputStream) ----> Client(InputStream)
 
     The ServerSocket has 4 constructors -
-        ![](SocketProgramming\src\public\img.png)
+        ![](src/public/img.png)
