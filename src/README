@@ -26,7 +26,42 @@ Socket Programming - TCP
     Server(OutputStream) ----> Client(InputStream)
 
     The ServerSocket has 4 constructors -
-        ![](src/public/img.png)
-    The ServerSocket has following mehods -
-        ![](public/img_1.png)
+        public ServerSocket(int port)throws IOException  - defining the port number
+        ServerSocket(int port , int backlog) - backlog specifies how many incoming client to wait for
+        ServerSocket(int port , int backlog, InetAddress add) - Inet used for servers having multiple IPs
+    The ServerSocket has following methods -
+        1. accept() - waits for incoming client
+        2. GetLocalPort() - port the server socket is listening to
+        3. setSoTimeout() - for how long ServerSocket waits for the client during accept
+        4. bind(SocketAddress host, int backlog ) - use this if called the constructor without parameters
+
+    The Socket class (Client) -
+    Constructors -
+    1. Socket (String host, int port) throws UnknownHostException, IOException
+    2. Socket (InetAddress host , int port )
+    3. Socket() - creates an unconnected socket . Use the connect function to connect to the server
+
+    Methods -
+    1. public void connect(SocketAddress host, int timeout) throws IOException
+    2. public InetAddress getInetAddress() ;
+    3. public int get port()
+    //assume public
+    4. SocketAddress getRemoteSocketAddress()
+    5. InputStream getInputStream() throws IOException
+    6. OutputStream getOutputStream() throws IOE...
+    7. public void close()
+
+    InetAddress Class -
+    Methods -
+    1. static InetAddress getByAddress(byte[] addr) -return object given the raw IP
+    2. String toString() - converts the IP address to a string
+
+
+
+
+
+
+
+
+
 
