@@ -6,6 +6,7 @@ class GreetingServer extends Thread{
     private ServerSocket serverSocket ;
 
     public GreetingServer (int port) throws IOException {
+        //setting the Server socket port
         serverSocket = new ServerSocket(port) ;
         serverSocket.setSoTimeout(10000) ;
     }
@@ -15,6 +16,7 @@ class GreetingServer extends Thread{
         {
             try{
                 System.out.println("Waiting for Client on port" + serverSocket.getLocalPort());
+                // creating a Socket object which waits for client to connect
                 Socket server = serverSocket.accept() ;
                 System.out.println("Client connected to " + server.getRemoteSocketAddress());
 
